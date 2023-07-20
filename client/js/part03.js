@@ -25,7 +25,7 @@ const swiper = new Swiper('.swiper',{
   autoplay: {
     disableOnInteraction: false,
   },
-  autoplay:true,
+  //autoplay:true,
   loop: true,
   speed:2000,
   parallax:true,
@@ -54,3 +54,19 @@ swiper.on('slideChange',function(e){
   console.log('슬라이드 애니메이션 끝 !');
   title.classList.add('is-active');
 })
+/* const restartAutoplay = () => {
+  swiper.autoplay.start();
+};
+
+swiper
+  .on("slideChange", function (e) {
+    title.classList.remove("is-active");
+    clearTimeout(swiper.autoplay.timeout); // 현재 autoplay 타임아웃을 취소
+    // 슬라이드가 넘어갈 때 slidechange, title=h3 의 클래스 리스트에서 is-active 를 지워달라.
+  })
+
+  .on("slideChangeTransitionEnd", function (e) {
+    title.classList.add("is-active");
+    setTimeout(restartAutoplay, 3000);
+    // 슬라이드가 끝날 때 slideChangeTransitionEnd, title=h3 의 클래스 리스트에서 is-active 를 추가해달라.
+  }); */
